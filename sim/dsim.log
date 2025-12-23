@@ -1,0 +1,251 @@
+=N:[UVMSource] Using sources from 'C:\Program Files\Altair\DSim\2025.1\uvm\1.2'
+=N:[UsageMeter (2025-12-23 17:35:45 Turkey Standard Time)] usage server initial connection
+=N:[License] 
+Licensed for Altair DSim Cloud.
+=N:[License] New lease granted.
+Analyzing...
+Elaborating...
+  Top-level modules:
+    $unit
+    tb_top
+=W:[IneffectiveDynamicCast]:
+    The following dynamic $cast cases will always be false    
+
+    C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_callback.svh:521:9             class uvm_pkg::uvm_callbacks#(class uvm_pkg::uvm_phase,class uvm_pkg::uvm_phase_cb)    class uvm_pkg::uvm_callbacks#(class uvm_pkg::uvm_phase,class uvm_pkg::uvm_callback)    
+    Included from C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_base.svh:76:3                                                                                                                                                                                  
+    Included from C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\uvm_pkg.sv:31:3                                                                                                                                                                                         
+
+    C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_callback.svh:671:12            class uvm_pkg::uvm_phase                                                               class uvm_pkg::uvm_report_object                                                       
+    Included from C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_base.svh:76:3                                                                                                                                                                                  
+
+    C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_callback.svh:731:10            class uvm_pkg::uvm_component                                                           class uvm_pkg::uvm_phase                                                               
+    Included from C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_base.svh:76:3                                                                                                                                                                                  
+
+    C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_callback.svh:808:10            class uvm_pkg::uvm_component                                                           class uvm_pkg::uvm_phase                                                               
+    Included from C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_base.svh:76:3                                                                                                                                                                                  
+
+  Found 6 unique specialization(s) of 6 design element(s).
+=W:[LatchInferred]:
+    The following variables in always_comb blocks are not written    
+    along all paths through the block.  Latches will be inferred:    
+
+    ..\rtl\axi4_lite_slave.sv:114:5    next_state    
+
+=W:[AlwaysFFNba]:
+    The following variables in always_ff blocks are not written    
+    using non-blocking assignments:                                
+
+    ..\rtl\axi4_lite_slave.sv:88:5    i    
+
+Optimizing...
+Building models...
+PLI/VPI access: +b 
+Simulation time precision is 1ns.
+Linking image.so...
+Using default typical min/typ/max.
+=S:Begin run-time elaboration and static initialization...
+UVM_INFO C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+=N:[dumpMXD] preparing MXD dump to 'waves.mxd'.
+=N:[dump] Dump started at time 0
+=N:Starting event scheduler...
+UVM_INFO @ 0: reporter [RNTST] Running test axi4lite_test...
+UVM_INFO .\..\sequences\axi4lite_sequence.svh(14) @ 0: uvm_test_top.env.agent.sequencer@@seq [SEQ_DEBUG] !!! YENI RTL UYUMLU SEQUENCE CALISIYOR !!!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 55: uvm_test_top.env.agent.monitor [MON] finish write : addr= 12 data= 39621141 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 95: uvm_test_top.env.agent.monitor [MON] finish write : addr= 2 data= 2c75c26a resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 135: uvm_test_top.env.agent.monitor [MON] finish write : addr= c data= 3b1745a6 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 175: uvm_test_top.env.agent.monitor [MON] finish write : addr= 5 data= 66ff1bba resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 215: uvm_test_top.env.agent.monitor [MON] finish write : addr= d data= ed53636f resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 255: uvm_test_top.env.agent.monitor [MON] finish write : addr= 1 data= 2e85a26e resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 295: uvm_test_top.env.agent.monitor [MON] finish write : addr= 2 data= 4ef3f0e9 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 335: uvm_test_top.env.agent.monitor [MON] finish write : addr= 1c data= cd246d90 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 375: uvm_test_top.env.agent.monitor [MON] finish write : addr= 17 data= d5ab7945 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 415: uvm_test_top.env.agent.monitor [MON] finish write : addr= d data= 7d2e921 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 455: uvm_test_top.env.agent.monitor [MON] finish write : addr= 1f data= bd2ad697 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 495: uvm_test_top.env.agent.monitor [MON] finish write : addr= 16 data= 1c799b8f resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 535: uvm_test_top.env.agent.monitor [MON] finish write : addr= 17 data= ab2ab06f resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 575: uvm_test_top.env.agent.monitor [MON] finish write : addr= 9 data= e8cfde67 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 615: uvm_test_top.env.agent.monitor [MON] finish write : addr= 6 data= b93a5cfe resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 655: uvm_test_top.env.agent.monitor [MON] finish write : addr= 1f data= cddd4cd0 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 695: uvm_test_top.env.agent.monitor [MON] finish write : addr= 0 data= a108a185 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 735: uvm_test_top.env.agent.monitor [MON] finish write : addr= 18 data= ff7d0463 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 775: uvm_test_top.env.agent.monitor [MON] finish write : addr= 4 data= 94606097 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 815: uvm_test_top.env.agent.monitor [MON] finish write : addr= 15 data= cce91101 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 855: uvm_test_top.env.agent.monitor [MON] finish write : addr= 16 data= 7aef051c resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 895: uvm_test_top.env.agent.monitor [MON] finish write : addr= d data= e0b2dd2a resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 935: uvm_test_top.env.agent.monitor [MON] finish write : addr= 15 data= 2f114e0a resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 975: uvm_test_top.env.agent.monitor [MON] finish write : addr= 9 data= f2698051 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1015: uvm_test_top.env.agent.monitor [MON] finish write : addr= 0 data= 7759c79 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1055: uvm_test_top.env.agent.monitor [MON] finish write : addr= a data= 7b821d7a resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1095: uvm_test_top.env.agent.monitor [MON] finish write : addr= 17 data= e1a459df resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1135: uvm_test_top.env.agent.monitor [MON] finish write : addr= 16 data= 439dcaa8 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1175: uvm_test_top.env.agent.monitor [MON] finish write : addr= 14 data= 23be0ec5 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1215: uvm_test_top.env.agent.monitor [MON] finish write : addr= 7 data= a266f760 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1255: uvm_test_top.env.agent.monitor [MON] finish write : addr= 15 data= 928d9202 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1295: uvm_test_top.env.agent.monitor [MON] finish write : addr= 7 data= 1ccfa092 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1335: uvm_test_top.env.agent.monitor [MON] finish write : addr= 15 data= d9b3613a resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1375: uvm_test_top.env.agent.monitor [MON] finish write : addr= 0 data= b8d75f2a resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1415: uvm_test_top.env.agent.monitor [MON] finish write : addr= f data= 721a00dd resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1455: uvm_test_top.env.agent.monitor [MON] finish write : addr= 6 data= 6dfd8c81 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1495: uvm_test_top.env.agent.monitor [MON] finish write : addr= 10 data= 38d9fcae resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1535: uvm_test_top.env.agent.monitor [MON] finish write : addr= 16 data= d9f484ee resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1575: uvm_test_top.env.agent.monitor [MON] finish write : addr= 18 data= 295b8ba8 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1615: uvm_test_top.env.agent.monitor [MON] finish write : addr= 17 data= 8f64d15b resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1655: uvm_test_top.env.agent.monitor [MON] finish write : addr= 9 data= f3140f3e resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1695: uvm_test_top.env.agent.monitor [MON] finish write : addr= 1f data= 2ab66840 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1735: uvm_test_top.env.agent.monitor [MON] finish write : addr= 6 data= 8c2091a9 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1775: uvm_test_top.env.agent.monitor [MON] finish write : addr= 2 data= a56fe1e8 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1815: uvm_test_top.env.agent.monitor [MON] finish write : addr= 1d data= 93c1b686 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1855: uvm_test_top.env.agent.monitor [MON] finish write : addr= 9 data= 7ef434ea resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1895: uvm_test_top.env.agent.monitor [MON] finish write : addr= 19 data= 38eb87ac resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1935: uvm_test_top.env.agent.monitor [MON] finish write : addr= 7 data= 19007595 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1975: uvm_test_top.env.agent.monitor [MON] finish write : addr= 9 data= f6a0c8b0 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 2015: uvm_test_top.env.agent.monitor [MON] finish write : addr= 19 data= e5819f6c resp=0
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2055: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2055: uvm_test_top.env.agent.monitor [MON] read done: addr=12 data=39621141
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2095: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2095: uvm_test_top.env.agent.monitor [MON] read done: addr=2 data=a56fe1e8
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2135: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2135: uvm_test_top.env.agent.monitor [MON] read done: addr=c data=3b1745a6
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2175: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2175: uvm_test_top.env.agent.monitor [MON] read done: addr=5 data=66ff1bba
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2215: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2215: uvm_test_top.env.agent.monitor [MON] read done: addr=d data=e0b2dd2a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2255: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2255: uvm_test_top.env.agent.monitor [MON] read done: addr=1 data=2e85a26e
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2295: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2295: uvm_test_top.env.agent.monitor [MON] read done: addr=2 data=a56fe1e8
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2335: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2335: uvm_test_top.env.agent.monitor [MON] read done: addr=1c data=cd246d90
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2375: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2375: uvm_test_top.env.agent.monitor [MON] read done: addr=17 data=8f64d15b
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2415: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2415: uvm_test_top.env.agent.monitor [MON] read done: addr=d data=e0b2dd2a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2455: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2455: uvm_test_top.env.agent.monitor [MON] read done: addr=1f data=2ab66840
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2495: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2495: uvm_test_top.env.agent.monitor [MON] read done: addr=16 data=d9f484ee
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2535: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2535: uvm_test_top.env.agent.monitor [MON] read done: addr=17 data=8f64d15b
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2575: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2575: uvm_test_top.env.agent.monitor [MON] read done: addr=9 data=f6a0c8b0
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2615: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2615: uvm_test_top.env.agent.monitor [MON] read done: addr=6 data=8c2091a9
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2655: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2655: uvm_test_top.env.agent.monitor [MON] read done: addr=1f data=2ab66840
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2695: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2695: uvm_test_top.env.agent.monitor [MON] read done: addr=0 data=b8d75f2a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2735: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2735: uvm_test_top.env.agent.monitor [MON] read done: addr=18 data=295b8ba8
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2775: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2775: uvm_test_top.env.agent.monitor [MON] read done: addr=4 data=94606097
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2815: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2815: uvm_test_top.env.agent.monitor [MON] read done: addr=15 data=d9b3613a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2855: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2855: uvm_test_top.env.agent.monitor [MON] read done: addr=16 data=d9f484ee
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2895: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2895: uvm_test_top.env.agent.monitor [MON] read done: addr=d data=e0b2dd2a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2935: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2935: uvm_test_top.env.agent.monitor [MON] read done: addr=15 data=d9b3613a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2975: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2975: uvm_test_top.env.agent.monitor [MON] read done: addr=9 data=f6a0c8b0
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3015: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3015: uvm_test_top.env.agent.monitor [MON] read done: addr=0 data=b8d75f2a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3055: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3055: uvm_test_top.env.agent.monitor [MON] read done: addr=a data=7b821d7a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3095: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3095: uvm_test_top.env.agent.monitor [MON] read done: addr=17 data=8f64d15b
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3135: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3135: uvm_test_top.env.agent.monitor [MON] read done: addr=16 data=d9f484ee
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3175: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3175: uvm_test_top.env.agent.monitor [MON] read done: addr=14 data=23be0ec5
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3215: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3215: uvm_test_top.env.agent.monitor [MON] read done: addr=7 data=19007595
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3255: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3255: uvm_test_top.env.agent.monitor [MON] read done: addr=15 data=d9b3613a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3295: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3295: uvm_test_top.env.agent.monitor [MON] read done: addr=7 data=19007595
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3335: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3335: uvm_test_top.env.agent.monitor [MON] read done: addr=15 data=d9b3613a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3375: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3375: uvm_test_top.env.agent.monitor [MON] read done: addr=0 data=b8d75f2a
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3415: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3415: uvm_test_top.env.agent.monitor [MON] read done: addr=f data=721a00dd
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3455: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3455: uvm_test_top.env.agent.monitor [MON] read done: addr=6 data=8c2091a9
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3495: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3495: uvm_test_top.env.agent.monitor [MON] read done: addr=10 data=38d9fcae
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3535: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3535: uvm_test_top.env.agent.monitor [MON] read done: addr=16 data=d9f484ee
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3575: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3575: uvm_test_top.env.agent.monitor [MON] read done: addr=18 data=295b8ba8
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3615: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3615: uvm_test_top.env.agent.monitor [MON] read done: addr=17 data=8f64d15b
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3655: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3655: uvm_test_top.env.agent.monitor [MON] read done: addr=9 data=f6a0c8b0
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3695: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3695: uvm_test_top.env.agent.monitor [MON] read done: addr=1f data=2ab66840
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3735: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3735: uvm_test_top.env.agent.monitor [MON] read done: addr=6 data=8c2091a9
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3775: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3775: uvm_test_top.env.agent.monitor [MON] read done: addr=2 data=a56fe1e8
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3815: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3815: uvm_test_top.env.agent.monitor [MON] read done: addr=1d data=93c1b686
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3855: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3855: uvm_test_top.env.agent.monitor [MON] read done: addr=9 data=f6a0c8b0
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3895: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3895: uvm_test_top.env.agent.monitor [MON] read done: addr=19 data=e5819f6c
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3935: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3935: uvm_test_top.env.agent.monitor [MON] read done: addr=7 data=19007595
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 3975: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 3975: uvm_test_top.env.agent.monitor [MON] read done: addr=9 data=f6a0c8b0
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 4015: uvm_test_top.env.scoreboard [SCB] verification succesfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 4015: uvm_test_top.env.agent.monitor [MON] read done: addr=19 data=e5819f6c
+UVM_INFO C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_objection.svh(1270) @ 4015: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+matches : 50
+mismatches : 0
+             TEST PASSED
+UVM_INFO C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_report_server.svh(847) @ 4015: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  154
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[MON]   100
+[RNTST]     1
+[SCB]    50
+[SEQ_DEBUG]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+
+SVA Summary:  2 assertions, 802 evaluations, 150 nonvacuous passes, 4 disables
+=N:[dumpMXD] closing MXD dump
+=N:[WriteMetrics] Writing coverage metrics...
+=T:Simulation terminated by $finish at time 4015 (C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_root.svh:517);
+Run directory: C:\Users\Caneser\Desktop\AXI4LITE_VIP\sim
+  System timescale is 1ns / 1ns
+  Altair DSim version: 2025.1.0 (b:R #c:449 h:df8da7d488 os:msys2_)
+  Random seed: (defaulted to 1)
