@@ -28,7 +28,7 @@ interface axi4lite_if #(parameter ADDRESS = 32, parameter DATA_WIDTH = 32)
 
   // SVA: AXI4-Lite Protocol Checks
 
-  // 1. KURAL: VALID kararlılığı
+  //  VALID kararlılığı
   // Master (Driver) AWVALID=1 yaptıysa, Ready gelene kadar 0'a düşemez.
   property p_awvalid_stable;
     @(posedge ACLK) disable iff (!ARESETN)
@@ -38,7 +38,7 @@ interface axi4lite_if #(parameter ADDRESS = 32, parameter DATA_WIDTH = 32)
   ASSERT_AWVALID_STABLE: assert property (p_awvalid_stable)
     else `uvm_error("SVA", "PROTOCOL ERROR: AWVALID dropped before Ready arrived!");
 
-  // 2. KURAL: X/Z Kontrolü (Bilinmeyen Sinyal)
+  //  X/Z Kontrolü
   // Reset yokken, Adres hattında X veya Z olmamalı.
   property p_addr_known;
     @(posedge ACLK) disable iff (!ARESETN)

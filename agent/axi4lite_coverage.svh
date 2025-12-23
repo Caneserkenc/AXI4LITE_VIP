@@ -20,3 +20,5 @@ class axi4lite_coverage extends uvm_subscriber #(axi4lite_seq_item);
       super.build_phase(phase);
 
     endfunction
+
+endclass
