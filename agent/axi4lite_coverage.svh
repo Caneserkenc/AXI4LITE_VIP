@@ -5,12 +5,6 @@ class axi4lite_coverage extends uvm_subscriber #(axi4lite_seq_item);
 
   axi4lite_seq_item cov_item;
 
-  function new(string name, uvm_component parent);
-    super.new(name, parent);
-    // Covergroupu oluştur 
-    cg_axi = new();
-  endfunction
-
   covergroup cg_axi;
  
     cp_addr: coverpoint cov_item.addr {
@@ -30,6 +24,12 @@ class axi4lite_coverage extends uvm_subscriber #(axi4lite_seq_item);
     cross_ops: cross cp_addr, cp_op;
 
   endgroup
+
+  function new(string name, uvm_component parent);
+    super.new(name, parent);
+    // Covergroupu oluştur 
+    cg_axi = new();
+  endfunction
 
   function void write(axi4lite_seq_item t);
     cov_item = t;
