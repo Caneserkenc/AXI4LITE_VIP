@@ -12,6 +12,7 @@ package axi4lite_pkg;
     //  Agent Bileşenleri
     `include "agent/axi4lite_driver.svh"
     `include "agent/axi4lite_monitor.svh"
+    `include "agent/axi4lite_coverage.svh"
     `include "agent/axi4lite_agent.svh"
 
     // Scoreboard

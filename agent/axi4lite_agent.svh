@@ -3,8 +3,9 @@ class axi4lite_agent extends uvm_agent;
   `uvm_component_utils(axi4lite_agent)
 
   uvm_sequencer #(axi4lite_seq_item) sequencer; //yeni bir sequencer dosyası oluşturmamak için bu şekilde kullan(standart uvm sequencer)
-  axi4lite_driver driver;
-  axi4lite_monitor monitor;
+  axi4lite_driver   driver;
+  axi4lite_monitor  monitor;
+  axi4lite_coverage coverage;
 
 
   function new(string name, uvm_component parent);
@@ -15,6 +16,7 @@ class axi4lite_agent extends uvm_agent;
     super.build_phase(phase);
 
       monitor = axi4lite_monitor::type_id::create("monitor",this);
+      coverage = axi4lite_coverage::type_id::create("coverage",this);
   
       if(get_is_active() == UVM_ACTIVE) begin 
           driver    = axi4lite_driver::type_id::create("driver", this);
@@ -26,6 +28,8 @@ class axi4lite_agent extends uvm_agent;
      super.connect_phase(phase);
      if(get_is_active()== UVM_ACTIVE) begin
        driver.seq_item_port.connect(sequencer.seq_item_export);
+
+       monitor.item_collected_port.connect(coverage.analysis_export);
      end
   
   endfunction 
