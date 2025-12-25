@@ -1,5 +1,5 @@
 =N:[UVMSource] Using sources from 'C:\Program Files\Altair\DSim\2025.1\uvm\1.2'
-=N:[UsageMeter (2025-12-24 17:58:40 Turkey Standard Time)] usage server initial connection
+=N:[UsageMeter (2025-12-24 18:41:08 Turkey Standard Time)] usage server initial connection
 =N:[License] 
 Licensed for Altair DSim Cloud.
 =N:[License] New lease granted.
@@ -41,13 +41,6 @@ Optimizing...
 Building models...
 PLI/VPI access: +b 
 Simulation time precision is 1ns.
-  [1/9] module $root: 1837 functions, 4055 basic blocks
-  [2/9] module $pkgs: 1 functions, 2 basic blocks
-  [3/9] CU scope $unit: 1 functions, 2 basic blocks
-  [4/9] module tb_top: 22 functions, 83 basic blocks
-  [6/9] package uvm_pkg: 6 submodules, 3881 functions, 42523 basic blocks
-  [7/9] package axi4lite_pkg: 95 functions, 627 basic blocks
-  [8/9] interface axi4lite_if#(32,32): 18 functions, 80 basic blocks
 Linking image.so...
 Using default typical min/typ/max.
 =S:Begin run-time elaboration and static initialization...
