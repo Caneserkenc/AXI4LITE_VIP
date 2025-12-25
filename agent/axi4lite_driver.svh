@@ -37,22 +37,17 @@ class axi4lite_driver extends uvm_driver#(axi4lite_seq_item);
            vif.S_WDATA   <= seq.data;
            vif.S_WSTRB   <= seq.strb;
            vif.S_WVALID  <= 1'b1;      
-           
-           // Cevap 
            vif.S_BREADY  <= 1'b1;
            
-           // Handshake bekle
            do begin
               @(posedge vif.ACLK);
            end while (vif.S_AWREADY === 0 || vif.S_WREADY === 0);
            
-           // Temizlik 
            vif.S_AWVALID <= 1'b0;
            vif.S_WVALID  <= 1'b0;     
            vif.S_AWADDR  <= 0;
            vif.S_WDATA   <= 0;
            
-           // Cevap bekle
            do begin 
               @(posedge vif.ACLK);
            end while (vif.S_BVALID === 0); 

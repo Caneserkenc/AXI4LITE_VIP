@@ -2,16 +2,15 @@ class axi4lite_seq_item extends uvm_sequence_item;
 
    `uvm_object_utils(axi4lite_seq_item)
 
-    rand bit [31:0] addr;  // read or write hedef adres 
-    rand bit [31:0] data;  //read or write yazılacak data 
+    rand bit [31:0] addr;  
+    rand bit [31:0] data;   
     rand bit [3:0]  strb;
-    rand bit        is_write;  //read mi write mi?
+    rand bit        is_write; 
     rand int        delay;
-         bit [1:0]  resp;  //işlem sonucu BRESP veya RRESP
-         bit [31:0] rdata;  //read data için
+         bit [1:0]  resp;  
+         bit [31:0] rdata;  
 
-
-    //Adresin son 2 biti 00 (binary) olursa sayı 4'e tam bölünür. 
+    // Enforce 32-bit (4-byte) address alignment as required by the RTL/Protocol
     constraint c_align { addr[1:0] == 2'b00; } 
     function new (string name = "axi4lite_seq_item");
      super.new(name);
