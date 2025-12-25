@@ -1,5 +1,5 @@
 =N:[UVMSource] Using sources from 'C:\Program Files\Altair\DSim\2025.1\uvm\1.2'
-=N:[UsageMeter (2025-12-25 14:55:11 Turkey Standard Time)] usage server initial connection
+=N:[UsageMeter (2025-12-25 16:03:29 Turkey Standard Time)] usage server initial connection
 =N:[License] 
 Licensed for Altair DSim Cloud.
 =N:[License] New lease granted.
@@ -41,12 +41,6 @@ Optimizing...
 Building models...
 PLI/VPI access: +b 
 Simulation time precision is 1ns.
-  [1/9] module $root: 1837 functions, 4055 basic blocks
-  [3/9] CU scope $unit: 1 functions, 2 basic blocks
-  [4/9] module tb_top: 22 functions, 83 basic blocks
-  [6/9] package uvm_pkg: 6 submodules, 3892 functions, 42568 basic blocks
-  [7/9] package axi4lite_pkg: 110 functions, 709 basic blocks
-  [8/9] interface axi4lite_if#(32,32): 18 functions, 80 basic blocks
 Linking image.so...
 Using default typical min/typ/max.
 =S:Begin run-time elaboration and static initialization...
@@ -76,24 +70,122 @@ UVM-1.2
 =N:[dump] Dump started at time 0
 =N:Starting event scheduler...
 UVM_INFO @ 0: reporter [RNTST] Running test axi4lite_stress_test...
-UVM_FATAL @ 0: reporter [FCTTYP] Factory did not return an object of type 'axi4lite_sequence'. A component of type 'axi4lite_high_addr_sequence' was returned instead. Name=seq Parent=null contxt=
-UVM_INFO C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_report_server.svh(847) @ 0: reporter [UVM/REPORT/SERVER] 
+UVM_INFO .\..\tests\axi4lite_stress_test.svh(14) @ 0: uvm_test_top [TEST] !!! STRESS TEST (HIGH ADDR)STARTING !!!
+UVM_INFO .\..\sequences\axi4lite_high_addr_sequence.svh(10) @ 0: uvm_test_top.env.agent.sequencer@@seq [SEQ] !!! STRESS TEST (HIGH ADDR) STARTING !!!
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(31) @ 55: uvm_test_top.env.scoreboard [SCB] Reading was done from an address that was not written.
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 55: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 95: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= 2c75c26a resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 135: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= 3b1745a6 resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 175: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 175: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 215: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= ed53636f resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 255: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= 2e85a26e resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 295: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 295: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 335: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= cd246d90 resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 375: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 375: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 415: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 415: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 455: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= bd2ad697 resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 495: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 495: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 535: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 535: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 575: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= e8cfde67 resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 615: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 615: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 655: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= cddd4cd0 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 695: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= a108a185 resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 735: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 735: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 775: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 775: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 815: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 815: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 855: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 855: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 895: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= e0b2dd2a resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 935: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= 2f114e0a resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 975: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 975: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1015: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= 7759c79 resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1055: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1055: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1095: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1095: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1135: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1135: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(31) @ 1175: uvm_test_top.env.scoreboard [SCB] Reading was done from an address that was not written.
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1175: uvm_test_top.env.agent.monitor [MON] read done: addr=0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1215: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= a266f760 resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1255: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= 928d9202 resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1295: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1295: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1335: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1335: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1375: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1375: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1415: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1415: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1455: uvm_test_top.env.agent.monitor [MON] finish write : addr= 0 data= 6dfd8c81 resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1495: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1495: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1535: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= d9f484ee resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1575: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1575: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1615: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1615: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1655: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= f3140f3e resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1695: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1695: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1735: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1735: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 1775: uvm_test_top.env.scoreboard [SCB] verification successfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1775: uvm_test_top.env.agent.monitor [MON] read done: addr=0 data=6dfd8c81
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1815: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= 93c1b686 resp=0
+UVM_ERROR .\..\scoreboard\axi4lite_scoreboard.svh(27) @ 1855: uvm_test_top.env.scoreboard [SCB] data miscatch!
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1855: uvm_test_top.env.agent.monitor [MON] read done: addr=fffffff0 data=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1895: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= 38eb87ac resp=0
+UVM_INFO .\..\agent\axi4lite_monitor.svh(42) @ 1935: uvm_test_top.env.agent.monitor [MON] finish write : addr= fffffff0 data= 19007595 resp=0
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 1975: uvm_test_top.env.scoreboard [SCB] verification successfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 1975: uvm_test_top.env.agent.monitor [MON] read done: addr=0 data=6dfd8c81
+UVM_INFO .\..\scoreboard\axi4lite_scoreboard.svh(24) @ 2015: uvm_test_top.env.scoreboard [SCB] verification successfull
+UVM_INFO .\..\agent\axi4lite_monitor.svh(62) @ 2015: uvm_test_top.env.agent.monitor [MON] read done: addr=0 data=6dfd8c81
+UVM_INFO .\..\sequences\axi4lite_high_addr_sequence.svh(32) @ 2015: uvm_test_top.env.agent.sequencer@@seq [SEQ] !!! STRESS TEST FINISH !!!
+UVM_INFO C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_objection.svh(1270) @ 2015: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO .\..\agent\axi4lite_coverage.svh(48) @ 2015: uvm_test_top.env.agent.coverage [COV_REPORT] --------------------------------------------------
+UVM_INFO .\..\agent\axi4lite_coverage.svh(49) @ 2015: uvm_test_top.env.agent.coverage [COV_REPORT] GENEL COVERAGE : % 75.00
+UVM_INFO .\..\agent\axi4lite_coverage.svh(50) @ 2015: uvm_test_top.env.agent.coverage [COV_REPORT] --------------------------------------------------
+UVM_INFO .\..\agent\axi4lite_coverage.svh(53) @ 2015: uvm_test_top.env.agent.coverage [COV_REPORT]  [0-16]   Low Range Hit : % 100.00
+UVM_INFO .\..\agent\axi4lite_coverage.svh(54) @ 2015: uvm_test_top.env.agent.coverage [COV_REPORT]  [17-100] Mid Range Hit : % 0.00
+UVM_INFO .\..\agent\axi4lite_coverage.svh(55) @ 2015: uvm_test_top.env.agent.coverage [COV_REPORT]  [High]   Stress Hit    : % 100.00
+UVM_INFO .\..\agent\axi4lite_coverage.svh(57) @ 2015: uvm_test_top.env.agent.coverage [COV_REPORT] --------------------------------------------------
+matches : 3
+mismatches : 27
+            TEST FAILED
+UVM_INFO C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_report_server.svh(847) @ 2015: reporter [UVM/REPORT/SERVER] 
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :    2
+UVM_INFO :   66
 UVM_WARNING :    0
-UVM_ERROR :    0
-UVM_FATAL :    1
+UVM_ERROR :   27
+UVM_FATAL :    0
 ** Report counts by id
-[FCTTYP]     1
+[COV_REPORT]     7
+[MON]    50
 [RNTST]     1
+[SCB]    30
+[SEQ]     2
+[TEST]     1
+[TEST_DONE]     1
 [UVM/RELNOTES]     1
 
-SVA Summary:  2 assertions, 0 evaluations, 0 nonvacuous passes
+SVA Summary:  2 assertions, 402 evaluations, 60 nonvacuous passes, 4 disables
 =N:[dumpMXD] closing MXD dump
 =N:[WriteMetrics] Writing coverage metrics...
-=T:Simulation terminated by $finish at time 0 (C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_root.svh:135);
+=T:Simulation terminated by $finish at time 2015 (C:\Program Files\Altair\DSim\2025.1\uvm\1.2\src\base\uvm_root.svh:517);
 Run directory: C:\Users\Caneser\Desktop\AXI4LITE_VIP\sim
   System timescale is 1ns / 1ns
   Altair DSim version: 2025.1.0 (b:R #c:449 h:df8da7d488 os:msys2_)

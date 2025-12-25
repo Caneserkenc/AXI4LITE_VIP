@@ -6,11 +6,22 @@ class axi4lite_stress_test extends axi4lite_test;
     super.new(name, parent);
   endfunction
 
-  function void build_phase(uvm_phase phase);
-   
-    axi4lite_sequence::type_id::set_type_override(axi4lite_high_addr_sequence::get_type());
+  virtual task run_phase(uvm_phase phase);
+    axi4lite_high_addr_sequence seq; 
 
-    super.build_phase(phase); 
-  endfunction
+    phase.raise_objection(this);
+    
+    `uvm_info("TEST", "STRESS TEST (HIGH ADDR)STARTING!", UVM_LOW)
+
+    seq = axi4lite_high_addr_sequence::type_id::create("seq");
+    
+    if(env == null || env.agent == null || env.agent.sequencer == null) begin
+       `uvm_fatal("TEST", " Sequencer not found.")
+    end
+    
+    seq.start(env.agent.sequencer);
+
+    phase.drop_objection(this);
+  endtask
 
 endclass
