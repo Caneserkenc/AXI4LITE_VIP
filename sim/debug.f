@@ -1,7 +1,8 @@
 #sık değişebilecek yapılar- simulasyon ayarları
 
 //  Test Seçimi 
-+UVM_TESTNAME=axi4lite_test
+// +UVM_TESTNAME=axi4lite_test
++UVM_TESTNAME=axi4lite_stress_test
 
 // Gözlem Ayarları 
 +UVM_VERBOSITY=UVM_HIGH

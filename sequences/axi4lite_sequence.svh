@@ -5,28 +5,24 @@ class axi4lite_sequence extends uvm_sequence #(axi4lite_seq_item);
 
   function new(string name = "axi4lite_sequence");
     super.new(name);
-  endfunction 
+  endfunction
 
   virtual task body();
-     axi4lite_seq_item req;
-     axi4lite_seq_item saved_req;
+    axi4lite_seq_item req;
+    axi4lite_seq_item saved_req;
 
-     `uvm_info("SEQ_DEBUG", "!!! YENI RTL UYUMLU SEQUENCE CALISIYOR !!!", UVM_NONE)
+    `uvm_info("SEQ", "!!! HAPPY PATH (QUEUE) STARTING !!!", UVM_LOW)
 
-
-     // YAZMA 
-
-     repeat(50) begin
+    repeat(50) begin
        req = axi4lite_seq_item::type_id::create("req");
        
        start_item(req);
        
-       
        if (!req.randomize() with { 
            is_write == 1; 
-           addr inside {[0:31]}; // RTL'in hafızası 32 
+           addr inside {[0:31]}; // RTL uyumlu adres
        }) begin 
-         `uvm_error("SEQ", "Randomize hatasi (Write)!");
+          `uvm_error("SEQ", "Randomize error (Write)!");
        end
        
        finish_item(req);
@@ -36,24 +32,25 @@ class axi4lite_sequence extends uvm_sequence #(axi4lite_seq_item);
        saved_req.data     = req.data;
        saved_req.is_write = req.is_write;
        write_queue.push_back(saved_req);
-     end
+    end
 
-
-     repeat(50) begin
+    repeat(50) begin
        if (write_queue.size() == 0) break;
        saved_req = write_queue.pop_front(); 
-
        req = axi4lite_seq_item::type_id::create("req");
        start_item(req);
        
        if (!req.randomize() with { 
            is_write == 0; 
-           addr == saved_req.addr; 
+           addr == saved_req.addr; // Aynı adresi oku
        }) begin
-         `uvm_error("SEQ", "Randomize error(Read)!");
+          `uvm_error("SEQ", "Randomize error(Read)!");
        end
        finish_item(req);
-     end
+    end
+    
+    `uvm_info("SEQ", "!!! HAPPY PATH FINISH!!!", UVM_LOW)
 
   endtask 
-endclass
+
+endclass 

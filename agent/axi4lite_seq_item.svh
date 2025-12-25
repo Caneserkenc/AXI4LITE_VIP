@@ -10,6 +10,9 @@ class axi4lite_seq_item extends uvm_sequence_item;
          bit [1:0]  resp;  //işlem sonucu BRESP veya RRESP
          bit [31:0] rdata;  //read data için
 
+
+    //Adresin son 2 biti 00 (binary) olursa sayı 4'e tam bölünür. 
+    constraint c_align { addr[1:0] == 2'b00; } 
     function new (string name = "axi4lite_seq_item");
      super.new(name);
     endfunction
